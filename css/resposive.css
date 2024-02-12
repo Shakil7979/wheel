@@ -21,6 +21,12 @@
   .headerSection {
     padding: 0.5rem 0;
   }
+  .hero_videos video { 
+    height: 100%; 
+  }
+  .heroSection {
+    min-height: calc(100vh - 19rem);
+  }
 
   .aboutImage {
     width: 100%;
@@ -62,6 +68,10 @@
 
   .footerSection::after {
     display: none;
+  }
+  .footerSection .footerImage {
+    top: auto;
+    bottom: -37%;
   }
 }
 

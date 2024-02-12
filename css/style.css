@@ -354,8 +354,8 @@ body {
 }
 
 .nftSection .nftImage {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr); */
 }
 
 .nftSection .nftImage .nft {
@@ -484,4 +484,24 @@ body {
 
 .nftSection .nftContent .text { 
 	margin: 20px 0 55px 0;
+}
+
+.nftSection .nftImage {
+	/* display: grid; */
+	/* grid-template-columns: repeat(2, 1fr); */
+	width: 50%;
+  margin: 0 auto; 
+  position: relative;
+}
+
+.nftImage .owl-next {
+	position: absolute;
+	top: 41%;
+	right: -60px;
+}
+
+.nftImage .owl-prev {
+	position: absolute;
+	top: 41%;
+	left: -60px;
 }
