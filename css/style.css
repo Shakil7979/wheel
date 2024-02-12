@@ -1,0 +1,475 @@
+@import url("https://fonts.googleapis.com/css2?family=Bakbak+One&family=Saira:wght@400;500;600;700;800;900&display=swap");
+
+/* 
+=== VARIABLES ===
+ */
+
+:root {
+  /* colors */
+  --bg-primary: #0889c2;
+  --bg-secondry: #141b22;
+  --bg-body: #040b11;
+
+  /* fonts color */
+  --text-white: #fff;
+  --text-black: #000;
+
+  /* fonts family */
+  --fonts-primary: "Saira", sans-serif;
+  --fonts-secondry: "Bakbak One", sans-serif;
+}
+
+/* 
+=== RESET PROPORTY ===
+ */
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Saira", sans-serif;
+  background-image: url(../img/bodyImage.png);
+  background-position: top;
+  background-size: cover;
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--bg-primary);
+}
+::-webkit-scrollbar-track {
+  background-color: var(--bg-body);
+}
+
+/* 
+=== REUSABLE CODE ===
+ */
+
+.mainBtn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background-color: var(--bg-primary);
+  color: var(--text-white);
+  font-family: var(--fonts-secondry);
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--bg-primary);
+  outline: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.mainBtn:hover {
+  background-color: transparent;
+  color: var(--text-white);
+}
+
+.mainBtn.secondryBtn {
+  background-color: var(--bg-secondry);
+  border-color: var(--bg-secondry);
+}
+
+.mainBtn.secondryBtn:hover {
+  border-color: var(--bg-primary);
+}
+
+/* 
+=== HEADER SECTION ===
+ */
+
+.headerSection {
+  padding: 0.5rem 2rem;
+  background-color: var(--bg-body);
+}
+
+.headerSection .navbar .navbar-brand img {
+  width: 170px;
+}
+
+.headerSection .navbar .nav-link {
+	color: var(--text-white);
+	margin-left: 1rem;
+	font-family: var(--fonts-secondry);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 16px;
+}
+
+.headerSection .navbar .nav-link:hover,
+.headerSection .navbar .nav-link.active {
+  color: var(--bg-primary);
+}
+
+.headerSection .navbar .navAction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+/* 
+.headerSection .navbar .navbar-nav {
+  margin-inline: auto;
+} */
+
+.headerSection .navbar .navAction .secondryBtn i {
+  margin-right: 0.5rem;
+}
+
+.headerSection .navbar .navbar-toggler {
+  color: var(--text-white);
+  border: 0;
+}
+
+.headerSection .navbar .navbar-toggler:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+/* 
+=== HEADER SECTION ===
+ */
+
+.heroSection {
+  min-height: calc(100vh - 6rem);
+  /* background-image: url(../img/heroBg.png); */
+  background-size: cover;
+  background-position: center;
+  color: var(--text-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero_videos video {
+	width: 100%;
+	/* height: 100%;
+  min-height: calc(100vh - 6rem); */
+}
+
+.hero_videos {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.hero_videos:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.heroSection .heroRow {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.heroSection .heroImage {
+  margin-bottom: 5rem;
+}
+
+.heroSection .heroContent .title {
+  font-weight: 700;
+}
+
+.heroSection .heroContent .title span {
+  color: var(--bg-primary);
+}
+
+.heroSection .heroContent .aboutBtn {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-white);
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-top: 4rem;
+  gap: 1rem;
+}
+
+.heroSection .heroContent .aboutBtn img {
+  display: block;
+  animation: updown 1s infinite ease-in-out;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* 
+=== SOCIAL SECTION ===
+ */
+
+.socialSection {
+  background-color: var(--bg-primary);
+}
+
+.socialSection .socialRow {
+  justify-content: center;
+  align-items: center;
+}
+
+.socialSection .socialRow .media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 1rem 0;
+}
+
+.socialSection .socialRow .media .icon {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.socialSection .socialRow .media .icon img {
+  transition: all 0.3s ease-in-out;
+}
+
+.socialSection .socialRow .media .icon img:hover {
+  transform: scale(1.2);
+}
+
+/* 
+=== ABOUT SECTION ===
+ */
+
+.aboutSection {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutSection .sectionHeading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.aboutSection .sectionHeading .title {
+  font-size: 4rem;
+  color: var(--text-white);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.aboutSection .sectionHeading .title span {
+  color: var(--bg-primary);
+}
+
+.aboutSection .aboutRow {
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.aboutImage {
+	width: 86%;
+}
+
+.footerRow {
+	position: relative;
+	z-index: 999;
+}
+
+.aboutImage video {
+	width: 100%;
+}
+
+.aboutContent {
+	width: 92%;
+}
+
+.aboutSection .aboutImage img {
+  width: 100%;
+}
+
+.aboutSection .aboutContent {
+  text-align: center;
+}
+
+.aboutSection .aboutContent .text {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: var(--text-white);
+  font-weight: 600;
+}
+
+.aboutSection .aboutContent .text span {
+  color: var(--bg-primary);
+}
+
+.aboutSection .aboutContent .aboutAction {
+  display: flex;
+  gap: 1rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+=== NFT SECTION ===
+ */
+
+.nftSection {
+  margin-top: 140px;
+}
+
+.nftSection .nftRow {
+  justify-content: center;
+}
+
+.nftSection .nftImage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.nftSection .nftImage .nft {
+  text-align: center;
+}
+
+.nftSection .nftImage .nft .title {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-white);
+  text-shadow: 1px 1px 3px #fbff0090;
+}
+
+.nftSection .nftContent {
+  text-align: center;
+  color: var(--text-white);
+}
+
+.nftSection .nftContent .title {
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.nftSection .nftContent .title span {
+  color: var(--bg-primary);
+}
+
+.nftSection .nftContent .text {
+  font-size: 1.2rem;
+}
+
+.nftSection .nftContent .nftCount {
+  font-size: 1.6rem;
+  color: #c2c3c5;
+  font-weight: 700;
+}
+
+.nftSection .nftContent .number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px #fbff0090;
+}
+
+/* 
+=== LIGHTING SECTION ===
+ */
+
+.lightingSection {
+  margin-block: 150px;
+  text-align: center;
+}
+
+.lightingSection .lightImage img {
+  margin-bottom: 2rem;
+}
+
+.lightingSection .lightImage .text {
+  color: var(--text-white);
+  font-size: 1.1rem;
+}
+
+/* 
+=== FOOTER SECTION ===
+ */
+
+.footerSection {
+  margin-top: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.footerSection::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 400px;
+  width: 400px;
+  background-color: #0c4a9e;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(120px);
+}
+
+.footerSection .footerLogo {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.footerSection .footerMedia {
+  text-align: center;
+}
+
+.footerSection .footerMedia .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.footerSection .footerMedia .title {
+  color: var(--text-white);
+  font-weight: 800;
+}
+
+.footerSection .footerMedia .icons .icon {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.footerSection .footerImage {
+  position: absolute;
+  top: 20%;
+}
