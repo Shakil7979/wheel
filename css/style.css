@@ -473,3 +473,15 @@ body {
   position: absolute;
   top: 20%;
 }
+
+.icon .img-fluid{
+  transition: 0.3s;
+}
+
+.icon .img-fluid:hover {
+	transform: scale(1.2);
+}
+
+.nftSection .nftContent .text { 
+	margin: 20px 0 55px 0;
+}
