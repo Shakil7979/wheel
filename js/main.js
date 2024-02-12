@@ -5,15 +5,20 @@ $(document).ready(function(){
 		items:1,
 		loop:true,
 		nav:true,
-		dots:false,
+		dots:true,
         slideSpeed: 600,
-        nav: true,
+        nav: false,
         navText: ["<img src='../img/icon_left.svg'>","<img src='../img/icon_right.svg'>"],
 		autoplay:true,
 	});
+
+    setTimeout(function() { 
+        $("#loader").fadeOut(); 
+    }, 1000);
 
 
 
 
 
 });
+
