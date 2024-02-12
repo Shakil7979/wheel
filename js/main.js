@@ -6,9 +6,10 @@ $(document).ready(function(){
 		loop:true,
 		nav:true,
 		dots:false,
+        slideSpeed: 600,
         nav: true,
-        navText: ["<img src='../img/icon_left.svg'>","<img src='../img/icon_right.svg'>"]
-		// autoplay:true,
+        navText: ["<img src='../img/icon_left.svg'>","<img src='../img/icon_right.svg'>"],
+		autoplay:true,
 	});
 
 

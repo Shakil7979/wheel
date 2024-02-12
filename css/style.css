@@ -497,11 +497,11 @@ body {
 .nftImage .owl-next {
 	position: absolute;
 	top: 41%;
-	right: -60px;
+	right: -80px;
 }
 
 .nftImage .owl-prev {
 	position: absolute;
 	top: 41%;
-	left: -60px;
+	left: -80px;
 }

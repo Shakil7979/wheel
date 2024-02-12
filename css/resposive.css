@@ -23,10 +23,14 @@
   }
   .hero_videos video { 
     height: 100%; 
+    display: none
   }
   .heroSection {
-    min-height: calc(100vh - 19rem);
+    min-height: calc(100vh - 19rem); 
+    background-image: url(../img/heroBg.png);
   }
+
+  
 
   .aboutImage {
     width: 100%;
