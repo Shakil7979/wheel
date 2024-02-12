@@ -22,6 +22,10 @@
     padding: 0.5rem 0;
   }
 
+  .aboutImage {
+    width: 100%;
+  }
+
   .headerSection .navbar {
     text-align: center;
   }
