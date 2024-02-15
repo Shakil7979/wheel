@@ -497,9 +497,9 @@ body {
 .nftSection .nftImage {
 	/* display: grid; */
 	/* grid-template-columns: repeat(2, 1fr); */
-	width: 52%;
-  margin: 0 auto; 
-  position: relative;
+	width: 70%;
+	margin: 0 auto;
+	position: relative;
 }
 
 .nftImage .owl-next {
@@ -561,6 +561,6 @@ body {
 
 
   .nft video {
-    width: 100% !important;
+    width: 460px !important;
     height: 100%;
   }
