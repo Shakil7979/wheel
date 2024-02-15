@@ -36,11 +36,19 @@ html {
   box-sizing: border-box;
 }
 
-body {
+/* body {
   font-family: "Saira", sans-serif;
   background-image: url(../img/bodyImage.png);
   background-position: top;
   background-size: cover;
+} */
+
+body {
+	font-family: "Saira", sans-serif;
+	/* background-image: url(../img/bodyImage.png); */
+	background-position: top;
+	background-size: cover;
+	background: #000;
 }
 
 ::-webkit-scrollbar {
@@ -549,4 +557,10 @@ body {
           -webkit-transform: rotate(360deg);
           transform: rotate(360deg)
       }
+  }
+
+
+  .nft video {
+    width: 100% !important;
+    height: 100%;
   }
