@@ -108,4 +108,7 @@
  */
 
 @media (max-width: 576px) {
+  .nft video {
+    width: 289px !important; 
+  }
 }
